@@ -14,420 +14,774 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            color: #6a7f59;
-            background-color: #ffffff;
-            line-height: 1.6;
+            color: #3e6277;
+            background-color: #f5f7f9;
+            line-height: 1.7;
+        }
+
+        button,
+        input,
+        textarea,
+        a {
+            font-family: 'Montserrat', sans-serif;
         }
 
         a {
             color: inherit;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
         }
 
-        a:hover {
-            color: #f9c623;
+        a:hover,
+        button:hover {
+            opacity: 0.9;
         }
 
-        /* Header & Navigation */
         header {
-            background-color: #ffffff;
-            padding: 2rem 2rem;
-            border-bottom: 2px solid #7caace;
             position: sticky;
             top: 0;
             z-index: 100;
+            background: #ffffff;
+            border-bottom: 1px solid rgba(124, 170, 206, 0.3);
         }
 
         nav {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
         }
 
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            font-weight: 700;
-            font-size: 1.5rem;
+            gap: 0.75rem;
             color: #66879e;
+            font-weight: 700;
+            font-size: 1.15rem;
+            letter-spacing: 0.06em;
         }
 
-        .logo-section img {
-            height: 40px;
-            width: auto;
+        .logo-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-mark .icon-trumpet {
+            display: inline-flex;
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #f9c623 0%, #e6b20d 100%);
+            position: relative;
+        }
+
+        .logo-mark .icon-trumpet::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 28%;
+            width: 6px;
+            height: 2px;
+            background: #3e6277;
+            transform: translateX(-50%);
+            border-radius: 1px;
+        }
+
+        .logo-mark .icon-trumpet::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 44%;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3e6277;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
+            color: #3e6277;
             font-weight: 500;
             font-size: 0.95rem;
-            color: #3e6277;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            padding: 0.25rem 0.5rem;
         }
 
         .nav-links a:hover {
+            color: #58608d;
+        }
+
+        .header-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.6rem;
+            border-radius: 999px;
             background-color: #f9c623;
             color: #ffffff;
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #3e6277;
+            white-space: nowrap;
+            box-shadow: 0 10px 25px rgba(249, 198, 35, 0.18);
+            transition: transform 0.2s ease;
         }
 
-        .tagline {
-            font-size: 1.75rem;
-            font-weight: 300;
+        .header-action:hover {
+            transform: translateY(-1px);
+            background-color: #e6b20d;
+        }
+
+        main {
+            padding-bottom: 4rem;
+        }
+
+        .hero {
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-top {
+            color: #66879e;
+            font-size: 0.82rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-headline {
+            font-size: clamp(2.9rem, 5vw, 4.7rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            color: #3e6277;
+            margin-bottom: 1.75rem;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-headline em {
+            font-style: italic;
             color: #f9c623;
-            margin-bottom: 2rem;
-            letter-spacing: 1px;
+            font-weight: 700;
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
-            color: #8ac19a;
-            font-weight: 400;
-            max-width: 600px;
-            margin: 0 auto 3rem;
+            color: #58608d;
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.9;
         }
 
-        /* CTA Buttons */
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
             justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: 3rem;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             border: none;
-            border-radius: 4px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 1rem;
+            border-radius: 999px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
+            text-decoration: none;
         }
 
         .btn-primary {
             background-color: #f9c623;
             color: #ffffff;
+            padding: 1rem 2.25rem;
+            font-weight: 700;
+            box-shadow: 0 12px 26px rgba(249, 198, 35, 0.18);
         }
 
         .btn-primary:hover {
             background-color: #e6b20d;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(249, 198, 35, 0.3);
+            transform: translateY(-1px);
         }
 
         .btn-secondary {
             background-color: transparent;
             color: #3e6277;
-            border: 2px solid #3e6277;
+            border: 1.5px solid rgba(62, 98, 119, 0.2);
+            padding: 1rem 2.25rem;
         }
 
-        .btn-secondary:hover {
-            background-color: #3e6277;
-            color: #ffffff;
-        }
-
-        /* Main Content Sections */
-        .sections-container {
-            max-width: 1200px;
+        section {
+            max-width: 1120px;
             margin: 0 auto;
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            padding: 3rem 2rem;
         }
 
-        .section-card {
-            padding: 3rem;
-            border-radius: 8px;
-            background-color: #ffffff;
-            border-left: 6px solid #8ac19a;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
+        .section-intro {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .section-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            transform: translateY(-4px);
-        }
-
-        .section-card:nth-child(2) {
-            border-left-color: #7caace;
-        }
-
-        .section-card h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
+        .section-intro h2 {
+            font-size: 2.1rem;
             color: #3e6277;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
 
-        .section-card p {
+        .section-intro p {
+            color: #58608d;
             font-size: 1rem;
-            color: #6a7f59;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.9;
         }
 
-        .section-card ul {
-            list-style: none;
-            margin-bottom: 1.5rem;
+        .grid-3,
+        .grid-4,
+        .contact-grid {
+            display: grid;
+            gap: 1.75rem;
         }
 
-        .section-card li {
-            padding: 0.5rem 0;
-            color: #6a7f59;
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
 
-        .section-card li:before {
-            content: "→ ";
-            color: #f9c623;
-            font-weight: 600;
-            margin-right: 0.5rem;
+        .grid-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #58608d 0%, #3e6277 100%);
-            color: #ffffff;
-            padding: 5rem 2rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .contact-section h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-section p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-            font-weight: 300;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .contact-item a {
-            color: #f9c623;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #8ac19a;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #3e6277;
-            color: #ffffff;
+        .card {
+            border-radius: 24px;
+            background: #ffffff;
+            border: 1px solid rgba(62, 98, 119, 0.12);
             padding: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: 300;
+            box-shadow: 0 22px 40px rgba(62, 98, 119, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        footer p {
-            margin-bottom: 0.5rem;
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 60px rgba(62, 98, 119, 0.1);
         }
 
-        .footer-accent {
+        .card-icon {
+            width: 52px;
+            height: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            background: rgba(249, 198, 35, 0.16);
+            color: #3e6277;
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+            color: #3e6277;
+            line-height: 1.4;
+        }
+
+        .card p {
+            color: #58608d;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: #58608d;
+            margin-bottom: 1.3rem;
+        }
+
+        .card li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .card li::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            margin-top: 0.55rem;
+            border-radius: 50%;
+            background: #f9c623;
+            flex-shrink: 0;
+        }
+
+        .service-footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .service-footer small {
+            color: #66879e;
+        }
+
+        .service-footer .btn {
+            padding: 0.85rem 1.4rem;
+            font-size: 0.95rem;
+        }
+
+        .mission-copy {
+            max-width: 760px;
+            margin: 0 auto;
+            color: #58608d;
+            line-height: 1.95;
+        }
+
+        .mission-copy em {
+            font-style: italic;
+            color: #3e6277;
+        }
+
+        .past-work {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            padding: 2.5rem;
+            border-radius: 24px;
+            background: #ffffff;
+            border: 1px solid rgba(62, 98, 119, 0.12);
+            box-shadow: 0 22px 40px rgba(62, 98, 119, 0.06);
+        }
+
+        .past-work p {
+            color: #58608d;
+            line-height: 1.9;
+            font-size: 1rem;
+            max-width: 720px;
+            margin: 0;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contact-panel {
+            border-radius: 24px;
+            padding: 2rem;
+            background: #ffffff;
+            border: 1px solid rgba(62, 98, 119, 0.12);
+            box-shadow: 0 22px 40px rgba(62, 98, 119, 0.06);
+        }
+
+        .contact-panel p {
+            color: #58608d;
+            line-height: 1.9;
+        }
+
+        .contact-panel form {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-panel label {
+            display: grid;
+            gap: 0.5rem;
+            color: #3e6277;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .contact-panel input,
+        .contact-panel textarea {
+            width: 100%;
+            border: 1px solid rgba(62, 98, 119, 0.18);
+            border-radius: 16px;
+            background: #f9fafb;
+            padding: 1rem 1.05rem;
+            color: #3e6277;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .contact-panel textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .contact-alternative {
+            margin-top: 1.5rem;
+            color: #3e6277;
+            font-size: 0.95rem;
+        }
+
+        .contact-alternative a {
             color: #f9c623;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .sections-container {
+        footer {
+            margin-top: 1rem;
+            padding: 2rem 2rem 3rem;
+            background: #3e6277;
+            color: #ffffff;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+
+        .footer-brand strong {
+            color: #f9c623;
+            font-size: 1.1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            font-size: 0.95rem;
+        }
+
+        .rotating-word {
+            color: #f9c623;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .rotating-word.visible {
+            opacity: 1;
+        }
+
+        @media (max-width: 1024px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            .grid-4 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 860px) {
+            .grid-3 {
                 grid-template-columns: 1fr;
             }
 
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .tagline {
-                font-size: 1.25rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .contact-info {
-                flex-direction: column;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 480px) {
-            header {
-                padding: 1.5rem 1rem;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 1.5rem;
+        @media (max-width: 640px) {
+            .hero {
+                padding-top: 3rem;
             }
 
             .nav-links {
-                flex-direction: column;
-                gap: 0.5rem;
-                text-align: center;
+                display: none;
             }
 
-            .hero {
-                padding: 3rem 1rem;
+            .hero-headline {
+                font-size: 2.7rem;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .section-intro h2 {
+                font-size: 1.9rem;
             }
 
-            .tagline {
-                font-size: 1rem;
+            .header-action {
+                width: 100%;
+                justify-content: center;
             }
 
-            .section-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .section-card h2 {
-                font-size: 1.5rem;
+            .past-work {
+                padding: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header>
         <nav>
             <div class="logo-section">
-                <img src="logo.png" alt="Gabriel LLC Logo">
-                <span>Gabriel</span>
+                <div class="logo-mark">
+                    <span>Gab</span>
+                    <span class="icon-trumpet" aria-hidden="true"></span>
+                    <span>el</span>
+                </div>
             </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#past-work">Past Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a class="header-action" href="#contact">Schedule a Free Consultation</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Gabriel</h1>
-        <p class="tagline">Amplifying Good</p>
-        <p class="hero-subtitle">Marketing solutions designed to elevate your brand and connect with your audience.</p>
-        <div class="cta-buttons">
-            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
-            <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Learn More</button>
-        </div>
-    </section>
-
-    <!-- Main Content Sections -->
-    <section class="sections-container">
-        <!-- About Gabriel -->
-        <div class="section-card" id="about">
-            <h2>Who is Gabriel?</h2>
-            <p>I'm a marketing strategist and freelance consultant dedicated to helping businesses amplify their message and reach their ideal audience.</p>
-            <p>With a focus on authentic, results-driven marketing, I combine creative strategy with data-informed insights to craft campaigns that resonate and convert.</p>
-            <ul>
-                <li>Strategic Marketing Planning</li>
-                <li>Brand Development</li>
-                <li>Digital Campaign Management</li>
-                <li>Content & Messaging Strategy</li>
-            </ul>
-        </div>
-
-        <!-- How I Can Help -->
-        <div class="section-card" id="services">
-            <h2>How Can I Help You?</h2>
-            <p>Whether you're a startup looking to establish your brand or an established business seeking to scale, I provide tailored marketing solutions.</p>
-            <ul>
-                <li>Brand positioning & messaging</li>
-                <li>Marketing strategy & planning</li>
-                <li>Campaign development & execution</li>
-                <li>Digital marketing optimization</li>
-                <li>Audience analysis & targeting</li>
-            </ul>
-            <p><strong>Ready to amplify your growth?</strong> Let's work together to create marketing that matters.</p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <h2>Let's Connect</h2>
-        <p>Have a project in mind? Want to discuss your marketing goals? I'd love to hear from you.</p>
-        <div class="contact-info">
-            <div class="contact-item">
-                <p>Email</p>
-                <a href="mailto:hello@gabriellc.com">hello@gabriellc.com</a>
+    <main>
+        <section class="hero">
+            <div class="hero-top">GOOD DESERVES TO BE AMPLIFIED</div>
+            <h1 class="hero-headline">Good <em id="rotating-word" class="rotating-word">organizations</em> deserve to be amplified.</h1>
+            <p class="hero-subtitle">We help organizations doing honest good in the world increase their impact through excellent marketing & communications.</p>
+            <div class="cta-buttons">
+                <a class="btn btn-primary" href="#contact">Schedule a Free Consultation</a>
+                <a class="btn btn-secondary" href="#past-work">View Past Work</a>
             </div>
-            <div class="contact-item">
-                <p>LinkedIn</p>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
-            </div>
-            <div class="contact-item">
-                <p>Phone</p>
-                <a href="tel:+1234567890">Available upon request</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="beliefs">
+            <div class="section-intro">
+                <h2>What We Believe</h2>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-icon">✔</div>
+                    <h3>Doing honest good means solving a genuine human problem or need.</h3>
+                    <p>Organizations create value when they improve people's lives, solve meaningful problems, or meet real needs.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3>We live to serve each other.</h3>
+                    <p>The strongest organizations exist to serve customers, communities, students, families, employees, and neighbors.</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">📣</div>
+                    <h3>Marketing strategy and tactics create impact.</h3>
+                    <p><em>Excellent</em> marketing strategy and tactics significantly increase impact. When important work is communicated clearly and effectively, more people benefit from it.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="who-we-serve">
+            <div class="section-intro">
+                <h2>Who We Serve</h2>
+                <p>We partner with businesses, nonprofits, and organizations that honestly solve a human problem or need.</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <h3>Businesses</h3>
+                    <p>Helping mission-driven businesses increase awareness, trust, and growth.</p>
+                </article>
+                <article class="card">
+                    <h3>Nonprofits</h3>
+                    <p>Helping worthy causes attract supporters, donors, volunteers, and advocates.</p>
+                </article>
+                <article class="card">
+                    <h3>Organizations</h3>
+                    <p>Helping schools, community organizations, and institutions communicate their value and strengthen engagement.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-intro">
+                <h2>How We Help</h2>
+                <p>Practical marketing and communications services tailored to your goals.</p>
+            </div>
+            <div class="grid-4">
+                <article class="card service-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Design & Print</h3>
+                    <ul>
+                        <li>Banners</li>
+                        <li>Signage</li>
+                        <li>Event materials</li>
+                        <li>Programs</li>
+                        <li>Sponsorship collateral</li>
+                        <li>Vehicle wraps</li>
+                    </ul>
+                    <div class="service-footer">
+                        <small>Starts at $___</small>
+                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
+                    </div>
+                </article>
+                <article class="card service-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Advertising</h3>
+                    <ul>
+                        <li>Social media campaigns</li>
+                        <li>Billboards</li>
+                        <li>Direct mail</li>
+                        <li>Paid advertising</li>
+                    </ul>
+                    <div class="service-footer">
+                        <small>Starts at $___</small>
+                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
+                    </div>
+                </article>
+                <article class="card service-card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Web & Email</h3>
+                    <ul>
+                        <li>Website design</li>
+                        <li>Website optimization</li>
+                        <li>Email communications</li>
+                        <li>Analytics & tracking</li>
+                    </ul>
+                    <div class="service-footer">
+                        <small>Starts at $___</small>
+                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
+                    </div>
+                </article>
+                <article class="card service-card">
+                    <div class="card-icon">📷</div>
+                    <h3>Photography & Video</h3>
+                    <ul>
+                        <li>Content capture</li>
+                        <li>Editing</li>
+                        <li>Promotional storytelling</li>
+                        <li>Event coverage</li>
+                    </ul>
+                    <div class="service-footer">
+                        <small>Starts at $___</small>
+                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="mission">
+            <div class="section-intro">
+                <h2>Why Gabriel Exists</h2>
+            </div>
+            <div class="mission-copy">
+                <p>Gabriel exists to amplify the organizations, products, services, and causes that do honest good in the world through excellent marketing and communications.</p>
+                <p>Inspired by Gabriel, the messenger of old, we believe important messages deserve to be delivered clearly, faithfully, and effectively.</p>
+            </div>
+        </section>
+
+        <section id="past-work">
+            <div class="section-intro">
+                <h2>Past Work</h2>
+            </div>
+            <div class="past-work">
+                <p>See examples of projects, campaigns, creative assets, websites, and communications initiatives.</p>
+                <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-intro contact-heading">
+                <h2>Let's Amplify the Good You're Doing.</h2>
+                <p>If your organization is creating real value for real people, we'd love to learn more and explore how strategic marketing and communications can increase your impact.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-panel">
+                    <form>
+                        <label>
+                            Name
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </label>
+                        <label>
+                            Organization
+                            <input type="text" name="organization" placeholder="Organization name" required>
+                        </label>
+                        <label>
+                            Email
+                            <input type="email" name="email" placeholder="hello@gabriellc.com" required>
+                        </label>
+                        <label>
+                            Phone (optional)
+                            <input type="tel" name="phone" placeholder="(123) 456-7890">
+                        </label>
+                        <label>
+                            How can we help?
+                            <textarea name="message" placeholder="Tell us about your goals" required></textarea>
+                        </label>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Start the Conversation</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-panel">
+                    <p>Prefer to connect directly? Reach out by email and we’ll follow up promptly.</p>
+                    <p class="contact-alternative">Email directly at <a href="mailto:hello@gabriellc.com">hello@gabriellc.com</a></p>
+                    <p style="margin-top: 2rem;">We keep communications straightforward, respectful, and focused on the impact your work delivers.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 <span class="footer-accent">Gabriel</span> LLC. All rights reserved.</p>
-        <p><span class="footer-accent">Amplifying Good</span> — Marketing solutions for meaningful brands.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <strong>Gabriel</strong>
+                <span>Amplifying good through thoughtful marketing.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#services">Services</a>
+                <a href="#past-work">Portfolio</a>
+                <a href="mailto:hello@gabriellc.com">Email</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <p style="margin-top:1.5rem;">&copy; 2026 Gabriel LLC. All rights reserved.</p>
     </footer>
+
+    <script>
+        const words = ['organizations', 'products', 'services', 'causes'];
+        const wordEl = document.getElementById('rotating-word');
+        let index = 0;
+
+        function showWord() {
+            wordEl.textContent = words[index];
+            wordEl.classList.add('visible');
+        }
+
+        function rotateWord() {
+            wordEl.classList.remove('visible');
+            setTimeout(() => {
+                index = (index + 1) % words.length;
+                wordEl.textContent = words[index];
+                wordEl.classList.add('visible');
+            }, 350);
+        }
+
+        showWord();
+        setInterval(rotateWord, 1500);
+    </script>
 </body>
 </html>
