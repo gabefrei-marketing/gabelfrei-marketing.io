@@ -1,796 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B42MWQPPHP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-B42MWQPPHP');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel | Amplifying Good</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: #3e6277;
-            background-color: #f5f7f9;
-            line-height: 1.7;
-        }
-
-        button,
-        input,
-        textarea,
-        a {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: all 0.25s ease;
-        }
-
-        a:hover,
-        button:hover {
-            opacity: 0.9;
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: #ffffff;
-            border-bottom: 1px solid rgba(124, 170, 206, 0.3);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            padding: 1.5rem 2rem;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: #66879e;
-            font-weight: 700;
-            font-size: 1.15rem;
-            letter-spacing: 0.06em;
-        }
-
-        .logo-mark {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-mark .icon-trumpet {
-            display: inline-flex;
-            width: 18px;
-            height: 18px;
-            border-radius: 5px;
-            background: linear-gradient(135deg, #f9c623 0%, #e6b20d 100%);
-            position: relative;
-        }
-
-        .logo-mark .icon-trumpet::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 28%;
-            width: 6px;
-            height: 2px;
-            background: #3e6277;
-            transform: translateX(-50%);
-            border-radius: 1px;
-        }
-
-        .logo-mark .icon-trumpet::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: 44%;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #3e6277;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.75rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #3e6277;
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.25rem 0.5rem;
-        }
-
-        .nav-links a:hover {
-            color: #58608d;
-        }
-
-        .header-action {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.85rem 1.6rem;
-            border-radius: 999px;
-            background-color: #f9c623;
-            color: #ffffff;
-            font-weight: 700;
-            white-space: nowrap;
-            box-shadow: 0 10px 25px rgba(249, 198, 35, 0.18);
-            transition: transform 0.2s ease;
-        }
-
-        .header-action:hover {
-            transform: translateY(-1px);
-            background-color: #e6b20d;
-        }
-
-        main {
-            padding-bottom: 4rem;
-        }
-
-        .hero {
-            padding: 5rem 2rem 4rem;
-            text-align: center;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .hero-top {
-            color: #66879e;
-            font-size: 0.82rem;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-headline {
-            font-size: clamp(2.9rem, 5vw, 4.7rem);
-            line-height: 0.98;
-            letter-spacing: -0.04em;
-            color: #3e6277;
-            margin-bottom: 1.75rem;
-            max-width: 920px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-headline em {
-            font-style: italic;
-            color: #f9c623;
-            font-weight: 700;
-        }
-
-        .hero-subtitle {
-            color: #58608d;
-            font-size: 1.05rem;
-            max-width: 680px;
-            margin: 0 auto 2.5rem;
-            line-height: 1.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            border-radius: 999px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            text-decoration: none;
-        }
-
-        .btn-primary {
-            background-color: #f9c623;
-            color: #ffffff;
-            padding: 1rem 2.25rem;
-            font-weight: 700;
-            box-shadow: 0 12px 26px rgba(249, 198, 35, 0.18);
-        }
-
-        .btn-primary:hover {
-            background-color: #e6b20d;
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: #3e6277;
-            border: 1.5px solid rgba(62, 98, 119, 0.2);
-            padding: 1rem 2.25rem;
-        }
-
-        section {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .section-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-intro h2 {
-            font-size: 2.1rem;
-            color: #3e6277;
-            margin-bottom: 1rem;
-        }
-
-        .section-intro p {
-            color: #58608d;
-            font-size: 1rem;
-            max-width: 720px;
-            margin: 0 auto;
-            line-height: 1.9;
-        }
-
-        .grid-3,
-        .grid-4,
-        .contact-grid {
-            display: grid;
-            gap: 1.75rem;
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .grid-4 {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-
-        .card {
-            border-radius: 24px;
-            background: #ffffff;
-            border: 1px solid rgba(62, 98, 119, 0.12);
-            padding: 2rem;
-            box-shadow: 0 22px 40px rgba(62, 98, 119, 0.06);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 28px 60px rgba(62, 98, 119, 0.1);
-        }
-
-        .card-icon {
-            width: 52px;
-            height: 52px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 18px;
-            background: rgba(249, 198, 35, 0.16);
-            color: #3e6277;
-            font-size: 1.25rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 1rem;
-            color: #3e6277;
-            line-height: 1.4;
-        }
-
-        .card p {
-            color: #58608d;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .card ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            color: #58608d;
-            margin-bottom: 1.3rem;
-        }
-
-        .card li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.85rem;
-        }
-
-        .card li::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            margin-top: 0.55rem;
-            border-radius: 50%;
-            background: #f9c623;
-            flex-shrink: 0;
-        }
-
-        .service-footer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .service-footer small {
-            color: #66879e;
-        }
-
-        .service-footer .btn {
-            padding: 0.85rem 1.4rem;
-            font-size: 0.95rem;
-        }
-
-        .mission-copy {
-            max-width: 760px;
-            margin: 0 auto;
-            color: #58608d;
-            line-height: 1.95;
-        }
-
-        .mission-copy em {
-            font-style: italic;
-            color: #3e6277;
-        }
-
-        .past-work {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            padding: 2.5rem;
-            border-radius: 24px;
-            background: #ffffff;
-            border: 1px solid rgba(62, 98, 119, 0.12);
-            box-shadow: 0 22px 40px rgba(62, 98, 119, 0.06);
-        }
-
-        .past-work p {
-            color: #58608d;
-            line-height: 1.9;
-            font-size: 1rem;
-            max-width: 720px;
-            margin: 0;
-        }
-
-        .contact-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .contact-panel {
-            border-radius: 24px;
-            padding: 2rem;
-            background: #ffffff;
-            border: 1px solid rgba(62, 98, 119, 0.12);
-            box-shadow: 0 22px 40px rgba(62, 98, 119, 0.06);
-        }
-
-        .contact-panel p {
-            color: #58608d;
-            line-height: 1.9;
-        }
-
-        .contact-panel form {
-            display: grid;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .contact-panel label {
-            display: grid;
-            gap: 0.5rem;
-            color: #3e6277;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .contact-panel input,
-        .contact-panel textarea {
-            width: 100%;
-            border: 1px solid rgba(62, 98, 119, 0.18);
-            border-radius: 16px;
-            background: #f9fafb;
-            padding: 1rem 1.05rem;
-            color: #3e6277;
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .contact-panel textarea {
-            min-height: 160px;
-            resize: vertical;
-        }
-
-        .form-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .contact-alternative {
-            margin-top: 1.5rem;
-            color: #3e6277;
-            font-size: 0.95rem;
-        }
-
-        .contact-alternative a {
-            color: #f9c623;
-        }
-
-        footer {
-            margin-top: 1rem;
-            padding: 2rem 2rem 3rem;
-            background: #3e6277;
-            color: #ffffff;
-        }
-
-        .footer-inner {
-            max-width: 1120px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.4rem;
-        }
-
-        .footer-brand strong {
-            color: #f9c623;
-            font-size: 1.1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-        }
-
-        .footer-links a {
-            color: #ffffff;
-            font-size: 0.95rem;
-        }
-
-        .rotating-word {
-            color: #f9c623;
-            font-style: italic;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .rotating-word.visible {
-            opacity: 1;
-        }
-
-        @media (max-width: 1024px) {
-            nav {
-                flex-wrap: wrap;
-            }
-
-            .grid-4 {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 860px) {
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero {
-                padding-top: 3rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-headline {
-                font-size: 2.7rem;
-            }
-
-            .section-intro h2 {
-                font-size: 1.9rem;
-            }
-
-            .header-action {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .past-work {
-                padding: 2rem;
-            }
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Gabriel | Amplifying Good</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo-section">
-                <div class="logo-mark">
-                    <span>Gab</span>
-                    <span class="icon-trumpet" aria-hidden="true"></span>
-                    <span>el</span>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#past-work">Past Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a class="header-action" href="#contact">Schedule a Free Consultation</a>
-        </nav>
-    </header>
+	<header id="header" class="site-header">
+		<nav class="site-nav container" role="navigation" aria-label="Main navigation">
+			<div class="nav-logo">
+				<a href="#home"><img src="/images/Gabriel_Amplifying Good.png" alt="Gabriel logo"></a>
+			</div>
 
-    <main>
-        <section class="hero">
-            <div class="hero-top">GOOD DESERVES TO BE AMPLIFIED</div>
-            <h1 class="hero-headline">Good <em id="rotating-word" class="rotating-word">organizations</em> deserve to be amplified.</h1>
-            <p class="hero-subtitle">We help organizations doing honest good in the world increase their impact through excellent marketing & communications.</p>
-            <div class="cta-buttons">
-                <a class="btn btn-primary" href="#contact">Schedule a Free Consultation</a>
-                <a class="btn btn-secondary" href="#past-work">View Past Work</a>
-            </div>
-        </section>
+			<button id="nav-hamburger" class="nav-hamburger" aria-controls="nav-overlay" aria-expanded="false" aria-label="Open menu">
+				<span class="bar" aria-hidden="true"></span>
+			</button>
 
-        <section id="beliefs">
-            <div class="section-intro">
-                <h2>What We Believe</h2>
-            </div>
-            <div class="grid-3">
-                <article class="card">
-                    <div class="card-icon">✔</div>
-                    <h3>Doing honest good means solving a genuine human problem or need.</h3>
-                    <p>Organizations create value when they improve people's lives, solve meaningful problems, or meet real needs.</p>
-                </article>
-                <article class="card">
-                    <div class="card-icon">🤝</div>
-                    <h3>We live to serve each other.</h3>
-                    <p>The strongest organizations exist to serve customers, communities, students, families, employees, and neighbors.</p>
-                </article>
-                <article class="card">
-                    <div class="card-icon">📣</div>
-                    <h3>Marketing strategy and tactics create impact.</h3>
-                    <p><em>Excellent</em> marketing strategy and tactics significantly increase impact. When important work is communicated clearly and effectively, more people benefit from it.</p>
-                </article>
-            </div>
-        </section>
+			<ul class="nav-links" role="menubar">
+				<li role="none"><a role="menuitem" href="#services">Services</a></li>
+				<li role="none"><a role="menuitem" href="#past-work">Past Work</a></li>
+				<li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+			</ul>
 
-        <section id="who-we-serve">
-            <div class="section-intro">
-                <h2>Who We Serve</h2>
-                <p>We partner with businesses, nonprofits, and organizations that honestly solve a human problem or need.</p>
-            </div>
-            <div class="grid-3">
-                <article class="card">
-                    <h3>Businesses</h3>
-                    <p>Helping mission-driven businesses increase awareness, trust, and growth.</p>
-                </article>
-                <article class="card">
-                    <h3>Nonprofits</h3>
-                    <p>Helping worthy causes attract supporters, donors, volunteers, and advocates.</p>
-                </article>
-                <article class="card">
-                    <h3>Organizations</h3>
-                    <p>Helping schools, community organizations, and institutions communicate their value and strengthen engagement.</p>
-                </article>
-            </div>
-        </section>
+			<a class="header-action" href="#contact">Schedule a Free Consultation</a>
+		</nav>
+	</header>
 
-        <section id="services">
-            <div class="section-intro">
-                <h2>How We Help</h2>
-                <p>Practical marketing and communications services tailored to your goals.</p>
-            </div>
-            <div class="grid-4">
-                <article class="card service-card">
-                    <div class="card-icon">🎨</div>
-                    <h3>Design & Print</h3>
-                    <ul>
-                        <li>Banners</li>
-                        <li>Signage</li>
-                        <li>Event materials</li>
-                        <li>Programs</li>
-                        <li>Sponsorship collateral</li>
-                        <li>Vehicle wraps</li>
-                    </ul>
-                    <div class="service-footer">
-                        <small>Starts at $___</small>
-                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
-                    </div>
-                </article>
-                <article class="card service-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Advertising</h3>
-                    <ul>
-                        <li>Social media campaigns</li>
-                        <li>Billboards</li>
-                        <li>Direct mail</li>
-                        <li>Paid advertising</li>
-                    </ul>
-                    <div class="service-footer">
-                        <small>Starts at $___</small>
-                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
-                    </div>
-                </article>
-                <article class="card service-card">
-                    <div class="card-icon">🌐</div>
-                    <h3>Web & Email</h3>
-                    <ul>
-                        <li>Website design</li>
-                        <li>Website optimization</li>
-                        <li>Email communications</li>
-                        <li>Analytics & tracking</li>
-                    </ul>
-                    <div class="service-footer">
-                        <small>Starts at $___</small>
-                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
-                    </div>
-                </article>
-                <article class="card service-card">
-                    <div class="card-icon">📷</div>
-                    <h3>Photography & Video</h3>
-                    <ul>
-                        <li>Content capture</li>
-                        <li>Editing</li>
-                        <li>Promotional storytelling</li>
-                        <li>Event coverage</li>
-                    </ul>
-                    <div class="service-footer">
-                        <small>Starts at $___</small>
-                        <a class="btn btn-secondary" href="#contact">Request Quote</a>
-                    </div>
-                </article>
-            </div>
-        </section>
+	<div id="nav-overlay" class="nav-overlay" aria-hidden="true">
+		<div class="nav-overlay-panel" role="dialog" aria-modal="true">
+			<button class="close" aria-label="Close menu">Close</button>
+			<nav aria-label="Mobile navigation">
+				<ul>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#past-work">Past Work</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
 
-        <section id="mission">
-            <div class="section-intro">
-                <h2>Why Gabriel Exists</h2>
-            </div>
-            <div class="mission-copy">
-                <p>Gabriel exists to amplify the organizations, products, services, and causes that do honest good in the world through excellent marketing and communications.</p>
-                <p>Inspired by Gabriel, the messenger of old, we believe important messages deserve to be delivered clearly, faithfully, and effectively.</p>
-            </div>
-        </section>
+	<main id="home">
+		<section class="hero container" id="hero">
+			<div class="hero-top">GOOD DESERVES TO BE AMPLIFIED</div>
+			<h1 class="hero-headline">Good <em id="rotating-word" class="rotating-word">organizations</em> deserve to be amplified.</h1>
+			<p class="hero-subtitle">We help organizations doing honest good in the world increase their impact through excellent marketing &amp; communications.</p>
+			<div class="cta-buttons">
+				<a class="btn btn-primary" href="#contact">Schedule a Free Consultation</a>
+				<a class="btn btn-secondary" href="#past-work">View Past Work</a>
+			</div>
+			<div class="hero-horn" aria-hidden="true">
+				<img src="/images/Horn_Logo.png" alt="Decorative horn logo">
+			</div>
+		</section>
 
-        <section id="past-work">
-            <div class="section-intro">
-                <h2>Past Work</h2>
-            </div>
-            <div class="past-work">
-                <p>See examples of projects, campaigns, creative assets, websites, and communications initiatives.</p>
-                <a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
-            </div>
-        </section>
+		<section id="beliefs" class="container">
+			<div class="section-intro">
+				<h2>What We Believe</h2>
+			</div>
+			<div class="grid-3">
+				<article class="card">
+					<div class="card-icon">✔</div>
+					<h3>Doing honest good means solving a genuine human problem or need.</h3>
+					<p>Organizations create value when they improve people's lives, solve meaningful problems, or meet real needs.</p>
+				</article>
+				<article class="card">
+					<div class="card-icon">🤝</div>
+					<h3>We live to serve each other.</h3>
+					<p>The strongest organizations exist to serve customers, communities, students, families, employees, and neighbors.</p>
+				</article>
+				<article class="card">
+					<div class="card-icon">📣</div>
+					<h3>Marketing strategy and tactics create impact.</h3>
+					<p><em>Excellent</em> marketing strategy and tactics significantly increase impact.</p>
+				</article>
+			</div>
+		</section>
 
-        <section id="contact" class="contact-section">
-            <div class="section-intro contact-heading">
-                <h2>Let's Amplify the Good You're Doing.</h2>
-                <p>If your organization is creating real value for real people, we'd love to learn more and explore how strategic marketing and communications can increase your impact.</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-panel">
-                    <form>
-                        <label>
-                            Name
-                            <input type="text" name="name" placeholder="Your name" required>
-                        </label>
-                        <label>
-                            Organization
-                            <input type="text" name="organization" placeholder="Organization name" required>
-                        </label>
-                        <label>
-                            Email
-                            <input type="email" name="email" placeholder="hello@gabriellc.com" required>
-                        </label>
-                        <label>
-                            Phone (optional)
-                            <input type="tel" name="phone" placeholder="(123) 456-7890">
-                        </label>
-                        <label>
-                            How can we help?
-                            <textarea name="message" placeholder="Tell us about your goals" required></textarea>
-                        </label>
-                        <div class="form-actions">
-                            <button class="btn btn-primary" type="submit">Start the Conversation</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="contact-panel">
-                    <p>Prefer to connect directly? Reach out by email and we’ll follow up promptly.</p>
-                    <p class="contact-alternative">Email directly at <a href="mailto:hello@gabriellc.com">hello@gabriellc.com</a></p>
-                    <p style="margin-top: 2rem;">We keep communications straightforward, respectful, and focused on the impact your work delivers.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+		<section id="services" class="container">
+			<div class="section-intro">
+				<h2>How We Help</h2>
+				<p>Practical marketing and communications services tailored to your goals.</p>
+			</div>
+			<div class="services-groups grid-4">
+				<div class="service-group">
+					<div class="service-header">Print &amp; Design</div>
+					<div class="service-cards">
+						<div class="service-card"><div class="icon">🎨</div><div>Banners — Signage — Programs — Vehicle Wraps <a class="btn" href="portfolio.html">See Real Examples</a></div></div>
+						<div class="service-card"><div class="icon">🖼️</div><div>Collateral — Sponsorship Materials — Event Assets</div></div>
+					</div>
+				</div>
 
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <strong>Gabriel</strong>
-                <span>Amplifying good through thoughtful marketing.</span>
-            </div>
-            <div class="footer-links">
-                <a href="#services">Services</a>
-                <a href="#past-work">Portfolio</a>
-                <a href="mailto:hello@gabriellc.com">Email</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-        <p style="margin-top:1.5rem;">&copy; 2026 Gabriel LLC. All rights reserved.</p>
-    </footer>
+				<div class="service-group">
+					<div class="service-header">Advertising</div>
+					<div class="service-cards">
+						<div class="service-card"><div class="icon">🎯</div><div>Social Media Ads &amp; Management — Billboards <a class="btn" href="portfolio.html">See Real Examples</a></div></div>
+						<div class="service-card"><div class="icon">✉️</div><div>Direct Mail — Paid Campaigns</div></div>
+					</div>
+				</div>
 
-    <script>
-        const words = ['organizations', 'products', 'services', 'causes'];
-        const wordEl = document.getElementById('rotating-word');
-        let index = 0;
+				<div class="service-group">
+					<div class="service-header">Web &amp; Email</div>
+					<div class="service-cards">
+						<div class="service-card"><div class="icon">🌐</div><div>Website Design &amp; Optimization — Email Design <a class="btn" href="portfolio.html">See Real Examples</a></div></div>
+						<div class="service-card"><div class="icon">📈</div><div>Analytics &amp; Tracking</div></div>
+					</div>
+				</div>
 
-        function showWord() {
-            wordEl.textContent = words[index];
-            wordEl.classList.add('visible');
-        }
+				<div class="service-group">
+					<div class="service-header">Photography &amp; Video</div>
+					<div class="service-cards">
+						<div class="service-card"><div class="icon">📷</div><div>Content Capture — Editing — Event Coverage <a class="btn" href="portfolio.html">See Real Examples</a></div></div>
+						<div class="service-card"><div class="icon">🎬</div><div>Promotional Storytelling</div></div>
+					</div>
+				</div>
+			</div>
+			<div class="post-services-cta" style="margin-top:1rem"><a class="btn" href="#contact">Free Quote</a></div>
+		</section>
 
-        function rotateWord() {
-            wordEl.classList.remove('visible');
-            setTimeout(() => {
-                index = (index + 1) % words.length;
-                wordEl.textContent = words[index];
-                wordEl.classList.add('visible');
-            }, 350);
-        }
+		<section id="about" class="container">
+			<div class="about-inner">
+				<div class="about-header">
+					<img src="/images/Gabriel_Amplifying Good.png" alt="Gabriel logo">
+					<h2>About</h2>
+				</div>
+				<div class="about-body">
+					<p>In 1996, I was named after Gabriel of the Bible, a messenger angel, who was often tasked with delivering important &amp; timely messages to specific audiences.</p>
+					<p>Today’s digital and physical landscape is a cacophony of voices. At Gabriel, I lend marketing and communications to elevate products, services, and causes honestly solving human problems.</p>
+				</div>
+				<img src="/images/Horn_Logo.png" alt="Horn Logo" class="about-horn">
+			</div>
+		</section>
 
-        showWord();
-        setInterval(rotateWord, 1500);
-    </script>
+		<section id="past-work" class="container">
+			<div class="section-intro"><h2>Past Work</h2></div>
+			<div class="past-work">
+				<p>See examples of projects, campaigns, creative assets, websites, and communications initiatives.</p>
+				<a class="btn btn-primary" href="portfolio.html">View Portfolio</a>
+			</div>
+		</section>
+
+		<section id="contact" class="container contact-section">
+			<div class="section-intro contact-heading">
+				<h2>Let's Amplify the Good You're Doing.</h2>
+				<p>If your organization is creating real value for real people, we'd love to learn more.</p>
+			</div>
+			<div class="contact-grid">
+				<div class="contact-panel">
+					<form action="https://formspree.io/f/your-form-id" method="POST">
+						<label>Name<input class="form-input" type="text" name="name" required></label>
+						<label>Organization<input class="form-input" type="text" name="organization" required></label>
+						<label>Details<textarea class="form-input" name="message" required></textarea></label>
+						<div class="form-actions"><button class="btn btn-primary" type="submit">Send Email</button></div>
+					</form>
+				</div>
+				<div class="contact-panel">
+					<div class="contact-options">
+						<div class="contact-option">
+							<h3>📅 Book time</h3>
+							<p><a href="https://calendly.com/gabefrei-marketing/15min" target="_blank" rel="noreferrer">Schedule a 15-minute call</a></p>
+						</div>
+						<div class="contact-option">
+							<h3>✉️ Email</h3>
+							<p class="contact-alternative">Email directly at <a href="mailto:hello@gabriellc.com">hello@gabriellc.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-inner container">
+			<div class="footer-brand">
+				<strong>Gabriel</strong>
+				<span>Amplifying good through thoughtful marketing.</span>
+			</div>
+			<div class="footer-links">
+				<a href="#services">Services</a>
+				<a href="portfolio.html">Portfolio</a>
+				<a href="mailto:hello@gabriellc.com">Email</a>
+			</div>
+			<div class="footer-logo-wrap">
+				<img src="/images/Gabriel_Amplifying Good.png" alt="Gabriel logo">
+			</div>
+		</div>
+		<p style="margin-top:1.25rem;text-align:center;color:rgba(255,255,255,0.9);">&copy; 2026 Gabriel LLC. All rights reserved.</p>
+	</footer>
+
+	<script src="js/main.js" defer></script>
 </body>
 </html>
