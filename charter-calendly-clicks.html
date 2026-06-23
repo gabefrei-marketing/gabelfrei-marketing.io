@@ -1,26 +1,42 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B42MWQPPHP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B42MWQPPHP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+```
   gtag('js', new Date());
 
   gtag('config', 'G-B42MWQPPHP');
+
+  gtag('event', 'charter_calendly_click');
 </script>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Charter School Redirect</title>
-	<style>
-		body{margin:0;padding:0;height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui,-apple-system,sans-serif;background:#08121a;color:#eef6f7}
-	</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+```
+
 </head>
 <body>
-	<p>Redirecting...</p>
-	<script>
-		setTimeout(function(){window.location.href='https://calendly.com/gabefrei-marketing/15min'},300);
-	</script>
+
+<p>Redirecting to scheduling page...</p>
+
+<script>
+fetch(
+  "https://script.google.com/macros/s/AKfycbyjLFe_um1Zr53R6U85IFJ03ICmBmfKZqNZ634FfKsfTxj-FWkVPpz-bE5ECHWDCQEM/exec?source=charter"
+)
+.catch(() => {})
+.finally(() => {
+  setTimeout(() => {
+    window.location.href = "https://calendly.com/gabefrei-marketing/15min";
+  }, 750);
+});
+</script>
+
 </body>
 </html>
