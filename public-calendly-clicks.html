@@ -7,18 +7,15 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
 ```
-  gtag('js', new Date());
-
   gtag('config', 'G-B42MWQPPHP');
-
-  gtag('event', 'public_calendly_click');
 </script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
+<title>Public School Calendly Redirect</title>
 ```
 
 </head>
@@ -32,9 +29,7 @@ fetch(
 )
 .catch(() => {})
 .finally(() => {
-  setTimeout(() => {
-    window.location.href = "https://calendly.com/gabefrei-marketing/15min";
-  }, 750);
+  window.location.href = "https://calendly.com/gabefrei-marketing/15min";
 });
 </script>
 
